@@ -37,7 +37,9 @@
 &trans  &mo 1  &kp SPACE  &kp TAB  &kp CLCK    &kp KP_NLCK  &trans  &kp BSPC   &mo 2    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
+                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         number_layer {
