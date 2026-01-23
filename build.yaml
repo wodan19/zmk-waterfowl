@@ -27,6 +27,3 @@ include:
 
   - board: nice_nano
     shield: settings_reset
-
-config:
-  - CONFIG_ZMK_STUDIO=y
