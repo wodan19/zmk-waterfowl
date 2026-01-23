@@ -141,21 +141,8 @@
     combos {
         compatible = "zmk,combos";
 
-        copy {
-            bindings = <&kp RG(C)>;
-            key-positions = <12 13>;
-            layers = <0>;
-        };
-
-        past {
-            bindings = <&kp RG(V)>;
-            key-positions = <2 3>;
-            layers = <0>;
-            timeout-ms = <0>;
-        };
-
         qwert_layer {
-            bindings = <&tog 3>;
+            bindings = <&to 3>;
             key-positions = <5 9>;
             layers = <0>;
         };
