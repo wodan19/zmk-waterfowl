@@ -22,6 +22,13 @@
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
         };
+
+        right_rotaries: right_rotaries {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "RIGHT_ROTARIES";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
+        };
     };
 
     keymap {
@@ -95,10 +102,10 @@
  */
 
             bindings = <
-&kp PRCNT  &kp AT       &kp LBKT   &kp RBKT  &kp NON_US_BSLH    &trans     &trans    &kp CARET          &trans     &studio_unlock
-&kp HASH   &kp EXCL     &kp LPAR   &kp RPAR  &kp PIPE           &kp UNDER  &kp APOS  &kp DOUBLE_QUOTES  &kp TILDE  &out OUT_BLE
-&kp DLLR   &zed_em_kay  &kp LBRC   &kp RBRC  &kp AMPS           &trans     &trans    &trans             &trans     &trans
-&trans     &mo 1        &kp SPACE  &kp TAB   &trans             &trans     &trans    &kp BSPC           &mo 0      &trans
+&kp PRCNT  &kp AT       &kp LBKT  &kp RBKT  &kp NON_US_BSLH    &trans     &trans    &kp CARET          &trans     &studio_unlock
+&kp HASH   &kp EXCL     &kp LPAR  &kp RPAR  &kp PIPE           &kp UNDER  &kp APOS  &kp DOUBLE_QUOTES  &kp TILDE  &out OUT_BLE
+&kp DLLR   &zed_em_kay  &kp LBRC  &kp RBRC  &kp AMPS           &trans     &trans    &trans             &trans     &trans
+&trans     &trans       &trans    &trans    &trans             &trans     &trans    &trans             &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOL_UP C_VOL_DN>;
