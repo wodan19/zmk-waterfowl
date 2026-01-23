@@ -142,15 +142,16 @@
         compatible = "zmk,combos";
 
         copy {
-            bindings = <&kp LG(C)>;
+            bindings = <&kp RG(C)>;
             key-positions = <12 13>;
             layers = <0>;
         };
 
         past {
-            bindings = <&kp LG(V)>;
+            bindings = <&kp RG(V)>;
             key-positions = <2 3>;
             layers = <0>;
+            timeout-ms = <0>;
         };
 
         qwert_layer {
@@ -160,7 +161,7 @@
         };
 
         colemake_layer {
-            bindings = <&tog 0>;
+            bindings = <&to 0>;
             key-positions = <25 29>;
             layers = <3>;
         };
