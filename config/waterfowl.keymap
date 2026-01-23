@@ -11,6 +11,19 @@
 &lt { quick_tap_ms = <200>; };
 
 / {
+    behaviors {
+        LShift_kp: LShift_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LSHIFT_KP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            hold-trigger-key-positions = <20 29>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -30,15 +43,15 @@
  */
 
             bindings = <
-&kp Q   &kp W             &kp F         &kp P      &kp B     &kp J   &kp L  &kp U      &kp Y          &kp SEMI
-&kp A   &kp R             &kp S         &kp T      &kp G     &kp M   &kp N  &kp E      &kp I          &kp O
-&kp Z   &kp X             &kp C         &kp D      &kp V     &kp K   &kp H  &kp COMMA  &kp DOT        &kp FSLH
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
+&kp Q                    &kp W             &kp F         &kp P      &kp B     &kp J   &kp L  &kp U      &kp Y          &kp SEMI
+&kp A                    &kp R             &kp S         &kp T      &kp G     &kp M   &kp N  &kp E      &kp I          &kp O
+&LShift_kp LEFT_SHIFT Z  &kp X             &kp C         &kp D      &kp V     &kp K   &kp H  &kp COMMA  &kp DOT        &LShift_kp SLASH RIGHT_SHIFT
+&trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+                <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         number_layer {
