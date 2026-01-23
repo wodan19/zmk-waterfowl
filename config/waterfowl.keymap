@@ -56,10 +56,10 @@
  */
 
             bindings = <
-&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &trans      &kp KP_PLUS  &kp N7  &kp N8   &kp N9  &kp KP_DIVIDE
-&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TAB     &kp MINUS    &kp N4  &kp N5   &kp N6  &kp KP_ASTERISK
-&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans      &kp N0       &kp N1  &kp N2   &kp N3  &kp KP_EQUAL
-&trans          &mo 1           &kp SPACE       &trans           &kp CLCK    &kp KP_NLCK  &trans  &kp DEL  &mo 0   &trans
+&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &trans     &kp KP_PLUS   &kp N7        &kp N8        &kp N9        &kp KP_DIVIDE
+&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TAB    &kp MINUS     &kp N4        &kp N5        &kp N6        &kp KP_ASTERISK
+&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans     &kp N0        &kp N1        &kp N2        &kp N3        &kp KP_EQUAL
+&kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4     &kp N5     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
