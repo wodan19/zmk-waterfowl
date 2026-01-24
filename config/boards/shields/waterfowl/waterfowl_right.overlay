@@ -6,24 +6,18 @@
 
 #include "waterfowl.dtsi"
 
-&default_transform {
-    col-offset = <5>;
+/* --- Encoder 2 (oben rechts) --- */
+encoder2: encoder_2 {
+    compatible = "zmk,encoder";
+    a-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+    b-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
+    steps = <4>;
 };
 
-&kscan0 {
-    col-gpios
-        = <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
-        ;
-};
-
-&roller_right_encoder {
-    status = "okay";
-};
-
-&dial_right_encoder {
-    status = "okay";
+/* --- Encoder 3 (unten rechts) --- */
+encoder3: encoder_3 {
+    compatible = "zmk,encoder";
+    a-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+    b-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+    steps = <4>;
 };
