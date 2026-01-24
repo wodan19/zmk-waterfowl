@@ -24,46 +24,8 @@
         };
     };
 
-    /* -----------------------------------------
-     * ENCODER DEFINITIONS (global, root level) 
-     * ----------------------------------------- */ 
-    encoder_0 {
-        bindings = <&kp PAGE_DOWN>, <&kp PAGE_UP>;
-    }; 
-    
-    encoder_1 { 
-        bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>; 
-    }; 
-    
-    encoder_2 { 
-        bindings = <&kp DOWN>, <&kp UP>; 
-    }; 
-    
-    encoder_3 { 
-        bindings = <&kp LEFT>, <&kp RIGHT>; 
-    }; 
-    /* ----------------------------------------- 
-    * KEYMAP (layers) 
-    * ----------------------------------------- */
-
     keymap {
         compatible = "zmk,keymap";
-
-        //        encoder_0 {
-        //            bindings = <&kp PAGE_DOWN &kp PAGE_UP>;
-        //        };
-        //        
-        //        encoder_1 {
-        //            bindings = <&kp C_VOL_DN &kp C_VOL_UP>;
-        //        };
-        //
-        //        encoder_2 {
-        //            bindings = <&kp DOWN &kp UP>;
-        //        };
-        //        
-        //        encoder_3 { 
-        //            bindings = <&kp LEFT &kp RIGHT>;
-        //        };
 
         default_layer {
             /* Colemak-DH
@@ -87,14 +49,14 @@
 &none                    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &none    &none  &mo 2  &mo 1      &kp RIGHT_GUI  &none
             >;
 
-            //            sensor-bindings = <
-            //                &inc_dec_kp PAGE_DOWN PAGE_UP
-            //                &inc_dec_kp C_VOL_DN C_VOL_UP
-            //                &inc_dec_kp DOWN UP
-            //                &inc_dec_kp LEFT RIGHT
-            //            >;
+                        sensor-bindings = <
+                            &inc_dec_kp PAGE_DOWN PAGE_UP
+                            &inc_dec_kp C_VOL_DN C_VOL_UP
+                            &inc_dec_kp DOWN UP
+                            &inc_dec_kp LEFT RIGHT
+                        >;
 
-            sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
+            //sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
         };
 
         number_layer {
