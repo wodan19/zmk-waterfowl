@@ -36,21 +36,21 @@
     keymap {
         compatible = "zmk,keymap";
     
-        encoder_0 {
-            bindings = <&kp PAGE_DOWN &kp PAGE_UP>;
-        };
-        
-        encoder_1 {
-            bindings = <&kp C_VOL_DN &kp C_VOL_UP>;
-        };
-
-        encoder_2 {
-            bindings = <&kp DOWN &kp UP>;
-        };
-        
-        encoder_3 { 
-            bindings = <&kp LEFT &kp RIGHT>;
-        };
+//        encoder_0 {
+//            bindings = <&kp PAGE_DOWN &kp PAGE_UP>;
+//        };
+//        
+//        encoder_1 {
+//            bindings = <&kp C_VOL_DN &kp C_VOL_UP>;
+//        };
+//
+//        encoder_2 {
+//            bindings = <&kp DOWN &kp UP>;
+//        };
+//        
+//        encoder_3 { 
+//            bindings = <&kp LEFT &kp RIGHT>;
+//        };
 
         default_layer {
             /* Colemak-DH
