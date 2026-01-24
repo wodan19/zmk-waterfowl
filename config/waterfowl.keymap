@@ -8,9 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-/ {
-    quick_tap_ms = <200>;
-};
+/ { quick_tap_ms = <200>; };
 
 / {
     behaviors {
@@ -31,26 +29,33 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
         };
+
+        left_rotary: left_rotary {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "LEFT_ROTARY";
+            #sensor-binding-cells = <0>;
+            bindings = <&none>, <&none>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
-    
-//        encoder_0 {
-//            bindings = <&kp PAGE_DOWN &kp PAGE_UP>;
-//        };
-//        
-//        encoder_1 {
-//            bindings = <&kp C_VOL_DN &kp C_VOL_UP>;
-//        };
-//
-//        encoder_2 {
-//            bindings = <&kp DOWN &kp UP>;
-//        };
-//        
-//        encoder_3 { 
-//            bindings = <&kp LEFT &kp RIGHT>;
-//        };
+
+        //        encoder_0 {
+        //            bindings = <&kp PAGE_DOWN &kp PAGE_UP>;
+        //        };
+        //        
+        //        encoder_1 {
+        //            bindings = <&kp C_VOL_DN &kp C_VOL_UP>;
+        //        };
+        //
+        //        encoder_2 {
+        //            bindings = <&kp DOWN &kp UP>;
+        //        };
+        //        
+        //        encoder_3 { 
+        //            bindings = <&kp LEFT &kp RIGHT>;
+        //        };
 
         default_layer {
             /* Colemak-DH
@@ -70,16 +75,18 @@
             bindings = <
 &kp Q                    &kp W             &kp F         &kp P      &kp B     &kp J   &kp L  &kp U      &kp Y          &kp SEMI
 &kp A                    &kp R             &kp S         &kp T      &kp G     &kp M   &kp N  &kp E      &kp I          &kp O
-&LShift_kp LEFT_SHIFT Z  &kp X             &kp C         &kp D      &kp V     &kp K   &kp H  &kp COMMA  &kp DOT        &LShift_kp SLASH RIGHT_SHIFT
+&LShift_kp LEFT_SHIFT Z  &kp X             &kp C         &kp D      &kp V     &kp K   &kp H  &kp COMMA  &kp DOT        &LShift_kp LEFT_SHIFT SLASH
 &trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
             >;
 
-//            sensor-bindings = <
-//                &inc_dec_kp PAGE_DOWN PAGE_UP
-//                &inc_dec_kp C_VOL_DN C_VOL_UP
-//                &inc_dec_kp DOWN UP
-//                &inc_dec_kp LEFT RIGHT
-//            >;
+            //            sensor-bindings = <
+            //                &inc_dec_kp PAGE_DOWN PAGE_UP
+            //                &inc_dec_kp C_VOL_DN C_VOL_UP
+            //                &inc_dec_kp DOWN UP
+            //                &inc_dec_kp LEFT RIGHT
+            //            >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
         };
 
         number_layer {
@@ -104,12 +111,12 @@
 &trans          &trans          &trans          &trans           &trans       &trans       &trans  &trans  &trans  &trans
             >;
 
-//            sensor-bindings = <
-//                &inc_dec_kp PAGE_DOWN PAGE_UP
-//                &inc_dec_kp C_VOL_DN C_VOL_UP
-//                &inc_dec_kp DOWN UP
-//                &inc_dec_kp LEFT RIGHT
-//            >;
+            //            sensor-bindings = <
+            //                &inc_dec_kp PAGE_DOWN PAGE_UP
+            //                &inc_dec_kp C_VOL_DN C_VOL_UP
+            //                &inc_dec_kp DOWN UP
+            //                &inc_dec_kp LEFT RIGHT
+            //            >;
         };
 
         symbol_layer {
@@ -134,12 +141,12 @@
 &trans     &trans       &trans    &trans    &trans             &trans     &trans    &trans             &trans     &trans
             >;
 
-//            sensor-bindings = <
-//                &inc_dec_kp PAGE_DOWN PAGE_UP
-//                &inc_dec_kp C_VOL_DN C_VOL_UP
-//                &inc_dec_kp DOWN UP
-//                &inc_dec_kp LEFT RIGHT
-//            >;
+            //            sensor-bindings = <
+            //                &inc_dec_kp PAGE_DOWN PAGE_UP
+            //                &inc_dec_kp C_VOL_DN C_VOL_UP
+            //                &inc_dec_kp DOWN UP
+            //                &inc_dec_kp LEFT RIGHT
+            //            >;
         };
 
         QWERT {
@@ -164,12 +171,12 @@
 &kp A   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
             >;
 
-//            sensor-bindings = <
-//                &inc_dec_kp PAGE_DOWN PAGE_UP
-//                &inc_dec_kp C_VOL_DN C_VOL_UP
-//                &inc_dec_kp DOWN UP
-//                &inc_dec_kp LEFT RIGHT
-//            >;
+            //            sensor-bindings = <
+            //                &inc_dec_kp PAGE_DOWN PAGE_UP
+            //                &inc_dec_kp C_VOL_DN C_VOL_UP
+            //                &inc_dec_kp DOWN UP
+            //                &inc_dec_kp LEFT RIGHT
+            //            >;
         };
     };
 };
@@ -192,6 +199,16 @@
             bindings = <&to 0>;
             key-positions = <25 29>;
             layers = <3>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <12 13>;
+        };
+
+        past {
+            bindings = <&kp RG(V)>;
+            key-positions = <2 3>;
         };
     };
 };
