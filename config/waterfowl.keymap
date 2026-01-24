@@ -22,20 +22,6 @@
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
         };
-
-        right_rotaries: right_rotaries {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "RIGHT_ROTARIES";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
-        };
-
-        left_rotary: left_rotary {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "LEFT_ROTARY";
-            #sensor-binding-cells = <0>;
-            bindings = <&none>, <&none>;
-        };
     };
 
     keymap {
@@ -165,10 +151,10 @@
  */
 
             bindings = <
-&gresc  &kp W             &kp E         &kp R      &kp T     &kp Z   &kp U  &kp I      &kp O          &kp P
-&kp A   &kp S             &kp D         &kp F      &kp G     &kp H   &kp J  &kp K      &kp L          &kp SEMI
-&kp Y   &kp X             &kp C         &kp V      &kp B     &kp N   &kp M  &kp COMMA  &kp PERIOD     &kp SLASH
-&kp A   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
+&gresc  &kp W   &kp E   &kp R   &kp T     &kp Z   &kp U   &kp I      &kp O       &kp P
+&kp A   &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L       &kp SEMI
+&kp Y   &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans      &trans
             >;
 
             //            sensor-bindings = <
