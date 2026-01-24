@@ -6,20 +6,22 @@
 
 #include "waterfowl.dtsi"
 
-/* --- Encoder 0 (oben links) --- */
-encoder0: encoder_0 {
-    compatible = "zmk,encoder";
-    a-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
-    b-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
-    steps = <4>;
-};
+ / {
+    /* --- Encoder 0 (oben links) --- */
+    encoder0: encoder_0 {
+        compatible = "zmk,encoder";
+        a-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+        b-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
+        steps = <4>;
+    };
 
-/* --- Encoder 1 (unten links) --- */
-encoder1: encoder_1 {
-    compatible = "zmk,encoder";
-    a-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
-    b-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
-    steps = <4>;
+    /* --- Encoder 1 (unten links) --- */
+    encoder1: encoder_1 {
+        compatible = "zmk,encoder";
+        a-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+        b-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+        steps = <4>;
+    };
 };
 
 /* Original Nodes */
