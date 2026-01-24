@@ -72,12 +72,12 @@
 &trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp PAGE_DOWN PAGE_UP
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &inc_dec_kp DOWN UP
-                &inc_dec_kp LEFT RIGHT
-            >;
+//            sensor-bindings = <
+//                &inc_dec_kp PAGE_DOWN PAGE_UP
+//                &inc_dec_kp C_VOL_DN C_VOL_UP
+//                &inc_dec_kp DOWN UP
+//                &inc_dec_kp LEFT RIGHT
+//            >;
         };
 
         number_layer {
@@ -102,12 +102,12 @@
 &trans          &trans          &trans          &trans           &trans       &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp PAGE_DOWN PAGE_UP
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &inc_dec_kp DOWN UP
-                &inc_dec_kp LEFT RIGHT
-            >;
+//            sensor-bindings = <
+//                &inc_dec_kp PAGE_DOWN PAGE_UP
+//                &inc_dec_kp C_VOL_DN C_VOL_UP
+//                &inc_dec_kp DOWN UP
+//                &inc_dec_kp LEFT RIGHT
+//            >;
         };
 
         symbol_layer {
@@ -132,12 +132,12 @@
 &trans     &trans       &trans    &trans    &trans             &trans     &trans    &trans             &trans     &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp PAGE_DOWN PAGE_UP
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &inc_dec_kp DOWN UP
-                &inc_dec_kp LEFT RIGHT
-            >;
+//            sensor-bindings = <
+//                &inc_dec_kp PAGE_DOWN PAGE_UP
+//                &inc_dec_kp C_VOL_DN C_VOL_UP
+//                &inc_dec_kp DOWN UP
+//                &inc_dec_kp LEFT RIGHT
+//            >;
         };
 
         QWERT {
@@ -162,12 +162,12 @@
 &trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp PAGE_DOWN PAGE_UP
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &inc_dec_kp DOWN UP
-                &inc_dec_kp LEFT RIGHT
-            >;
+//            sensor-bindings = <
+//                &inc_dec_kp PAGE_DOWN PAGE_UP
+//                &inc_dec_kp C_VOL_DN C_VOL_UP
+//                &inc_dec_kp DOWN UP
+//                &inc_dec_kp LEFT RIGHT
+//            >;
         };
     };
 };
