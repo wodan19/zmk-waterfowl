@@ -49,12 +49,12 @@
 &none                    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &none    &none  &mo 2  &mo 1      &kp RIGHT_GUI  &none
             >;
 
-                        sensor-bindings = <
+            sensor-bindings = <
                             &inc_dec_kp PAGE_DOWN PAGE_UP
                             &inc_dec_kp C_VOL_DN C_VOL_UP
                             &inc_dec_kp DOWN UP
                             &inc_dec_kp LEFT RIGHT
-                        >;
+            >;
 
             //sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp 0 0>;
         };
@@ -162,17 +162,19 @@
         qwert_layer_on_off {
             bindings = <&tog 3>;
             key-positions = <5 9>;
-            layers = <3>;
+            layers = <3 0>;
         };
 
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <12 13>;
+            layers = <0>;
         };
 
         past {
             bindings = <&kp RG(V)>;
             key-positions = <2 3>;
+            layers = <0>;
         };
     };
 };
