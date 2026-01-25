@@ -23,6 +23,27 @@
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
         };
+
+        tog1: tog1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOG1";
+            bindings = <&tog>, <&none>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <37>;
+            tapping-term-ms = <150>;
+        };
+
+        tog1_off: tog1_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOG1_OFF";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <37>;
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -136,10 +157,10 @@
  */
 
             bindings = <
-&kp Q                    &kp W             &kp E         &kp R      &kp T     &kp Z   &kp U  &kp I      &kp O          &kp P
-&kp A                    &kp S             &kp D         &kp F      &kp G     &kp H   &kp J  &kp K      &kp L          &kp SEMI
-&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B     &kp N   &kp M  &kp COMMA  &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
-&trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
+&kp Q                    &kp W             &kp E         &kp R      &kp T     &kp Z   &kp U  &kp I          &kp O          &kp P
+&kp A                    &kp S             &kp D         &kp F      &kp G     &kp H   &kp J  &kp K          &kp L          &kp SEMI
+&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B     &kp N   &kp M  &kp COMMA      &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
+&trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &tog_1_on_off  &kp RIGHT_GUI  &trans
             >;
 
             //            sensor-bindings = <
@@ -190,11 +211,17 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>,
+                <&kp F13 &kp KP_N1 &kp KP_N6 &kp KP_N3>,
                 <&macro_release>,
                 <&kp LALT>;
+        };
+
+        tog_1_on_off: tog_1_on_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&tog 1>, <&macro_release>, <&tog 1>;
+
+            label = "TOG_1_ON_OFF";
         };
     };
 };
