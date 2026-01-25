@@ -135,10 +135,10 @@
  */
 
             bindings = <
-&kp Q                    &kp W   &kp E   &kp R   &kp T     &kp Z   &kp U   &kp I      &kp O       &kp P
-&kp A                    &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L       &kp SEMI
-&LShift_kp LEFT_SHIFT Y  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp PERIOD  &LShift_kp RIGHT_SHIFT SLASH
-&trans                   &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans      &trans
+&kp Q                    &kp W             &kp E         &kp R      &kp T     &kp Z   &kp U  &kp I      &kp O          &kp P
+&kp A                    &kp S             &kp D         &kp F      &kp G     &kp H   &kp J  &kp K      &kp L          &kp SEMI
+&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B     &kp N   &kp M  &kp COMMA  &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
+&trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
             >;
 
             //            sensor-bindings = <
