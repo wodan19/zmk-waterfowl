@@ -19,30 +19,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <80>;
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
-        };
-
-        tog1: tog1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TOG1";
-            bindings = <&tog>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <37>;
-            tapping-term-ms = <150>;
-        };
-
-        tog1_off: tog1_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TOG1_OFF";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <37>;
-            tapping-term-ms = <150>;
         };
     };
 
