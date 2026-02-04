@@ -23,6 +23,24 @@
             flavor = "tap-preferred";
             hold-while-undecided;
         };
+
+        cursor_left: cursor_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CURSOR_LEFT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ARROW>, <&kp LA(LEFT_ARROW)>, <&kp HOME>;
+
+            tapping-term-ms = <70>;
+        };
+
+        cursor_right: cursor_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CURSOR_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LA(RIGHT)>, <&kp END>;
+
+            tapping-term-ms = <70>;
+        };
     };
 
     keymap {
@@ -106,10 +124,10 @@
  */
 
             bindings = <
-&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &kp PG_UP    &kp KP_PLUS  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
-&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none        &kp MINUS    &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
-&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans       &kp N0       &kp N1  &kp N2  &kp N3  &mt RIGHT_SHIFT KP_EQUAL
-&trans          &trans          &trans          &trans           &trans       &trans       &trans  &trans  &trans  &trans
+&kp ESC         &kp BACKSPACE  &kp UP_ARROW    &kp DELETE     &kp PG_UP    &kp KP_PLUS  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
+&kp TAB         &cursor_left   &kp DOWN_ARROW  &cursor_right  &none        &kp MINUS    &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
+&kp LEFT_SHIFT  &trans         &trans          &kp RET        &trans       &kp N0       &kp N1  &kp N2  &kp N3  &mt RIGHT_SHIFT KP_EQUAL
+&trans          &trans         &trans          &trans         &trans       &trans       &trans  &trans  &trans  &trans
             >;
 
             //            sensor-bindings = <
