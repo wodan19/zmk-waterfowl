@@ -177,6 +177,11 @@
             key-positions = <2 3>;
             layers = <0 1>;
         };
+
+        delete {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <3 4>;
+        };
     };
 };
 
