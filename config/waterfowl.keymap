@@ -188,7 +188,7 @@
         };
 
         delete {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp RG(BACKSPACE)>;
             key-positions = <3 4>;
         };
     };
