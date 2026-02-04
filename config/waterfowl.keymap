@@ -19,7 +19,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <80>;
+            tapping-term-ms = <95>;
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
         };
