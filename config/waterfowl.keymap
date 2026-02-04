@@ -30,7 +30,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ARROW>, <&kp LA(LEFT_ARROW)>, <&kp HOME>;
 
-            tapping-term-ms = <70>;
+            tapping-term-ms = <180>;
         };
 
         cursor_right: cursor_right {
@@ -39,7 +39,7 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LA(RIGHT)>, <&kp END>;
 
-            tapping-term-ms = <70>;
+            tapping-term-ms = <180>;
         };
     };
 
