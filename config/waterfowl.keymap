@@ -21,6 +21,7 @@
             tapping-term-ms = <95>;
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
+            hold-while-undecided;
         };
     };
 
