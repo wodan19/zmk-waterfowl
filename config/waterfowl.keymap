@@ -194,7 +194,7 @@
 
         space_cadet {
             bindings = <&caps_word>;
-            key-positions = <30 39>;
+            key-positions = <10 19>;
             layers = <1 0>;
         };
     };
