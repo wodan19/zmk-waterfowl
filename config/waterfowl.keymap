@@ -191,6 +191,12 @@
             bindings = <&kp RG(BACKSPACE)>;
             key-positions = <3 4>;
         };
+
+        space_cadet {
+            bindings = <&caps_word>;
+            key-positions = <30 39>;
+            layers = <1 0>;
+        };
     };
 };
 
