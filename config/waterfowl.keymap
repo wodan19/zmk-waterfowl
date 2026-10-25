@@ -41,6 +41,15 @@
 
             tapping-term-ms = <180>;
         };
+
+        Umlauts: Umlauts {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UMLAUTS";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&kp RA(U)>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     keymap {
@@ -62,10 +71,10 @@
  */
 
             bindings = <
-&kp Q                    &kp W             &kp E         &kp R      &kp T   &kp Z   &kp U  &kp I      &kp O          &kp P
-&kp A                    &kp S             &kp D         &kp F      &kp G   &kp H   &kp J  &kp K      &kp L          &kp SEMI
-&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B   &kp N   &kp M  &kp COMMA  &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
-&trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans  &trans  &mo 2  &mo 1      &kp RIGHT_GUI  &trans
+&kp Q                    &kp W             &kp E         &kp R      &kp T   &kp Z   &Umlauts  &kp I      &kp O          &kp P
+&kp A                    &kp S             &kp D         &kp F      &kp G   &kp H   &kp J     &kp K      &kp L          &kp SEMI
+&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B   &kp N   &kp M     &kp COMMA  &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
+&trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &trans  &trans  &mo 2     &mo 1      &kp RIGHT_GUI  &trans
             >;
 
             sensor-bindings = <
@@ -92,10 +101,10 @@
  */
 
             bindings = <
-&kp ESC         &kp BACKSPACE  &kp UP_ARROW    &kp DELETE     &kp PG_UP  &kp KP_PLUS  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
-&kp TAB         &cursor_left   &kp DOWN_ARROW  &cursor_right  &none      &kp MINUS    &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
-&kp LEFT_SHIFT  &trans         &trans          &kp RET        &trans     &kp N0       &kp N1  &kp N2  &kp N3  &mt RIGHT_SHIFT KP_EQUAL
-&trans          &trans         &trans          &trans         &trans     &trans       &trans  &trans  &trans  &trans
+&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &kp PG_UP  &kp KP_PLUS  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
+&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp MINUS    &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
+&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans     &kp N0       &kp N1  &kp N2  &kp N3  &mt RIGHT_SHIFT KP_EQUAL
+&trans          &trans          &trans          &trans           &trans     &trans       &trans  &trans  &trans  &trans
             >;
 
             //            sensor-bindings = <
@@ -122,10 +131,10 @@
  */
 
             bindings = <
-&kp PRCNT  &kp AT       &kp LBKT  &kp RBKT  &kp NON_US_BSLH  &trans         &trans    &kp CARET          &trans     &none
-&kp HASH   &kp EXCL     &kp LPAR  &kp RPAR  &kp PIPE         &kp LC(LS(B))  &kp APOS  &kp DOUBLE_QUOTES  &kp TILDE  &none
-&kp DLLR   &zed_em_kay  &kp LBRC  &kp RBRC  &kp HASH         &none          &none     &none              &none      &none
-&trans     &trans       &trans    &mo 3     &trans           &trans         &trans    &trans             &trans     &trans
+&kp PRCNT  &kp AT          &kp LBKT   &kp RBKT       &kp NON_US_BSLH  &trans         &trans    &kp CARET          &trans     &none
+&kp HASH   &kp LEFT_BRACE  &kp LPAR   &kp RPAR       &kp RIGHT_BRACE  &kp LC(LS(B))  &kp APOS  &kp DOUBLE_QUOTES  &kp TILDE  &none
+&kp DLLR   &kp TILDE       &kp SLASH  &kp BACKSLASH  &kp HASH         &none          &none     &none              &none      &none
+&trans     &trans          &trans     &mo 3          &trans           &trans         &trans    &trans             &trans     &trans
             >;
 
             //            sensor-bindings = <
