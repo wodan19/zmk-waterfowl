@@ -18,10 +18,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
-            hold-trigger-key-positions = <20 29>;
-            flavor = "tap-preferred";
-            hold-while-undecided;
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <29 25 15 5 6 16 26 27 17 7 8 18 28 19 9>;
+            flavor = "balanced";
+            hold-trigger-on-release;
         };
 
         cursor_left: cursor_left {
@@ -59,6 +59,18 @@
 
             tapping-term-ms = <270>;
         };
+
+        RShift_kp: RShift_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RSHIFT_KP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <24 14 4 3 13 23 22 12 2 1 11 21 20 10 0>;
+        };
     };
 
     keymap {
@@ -82,7 +94,7 @@
             bindings = <
 &kp Q                    &kp W             &kp E         &kp R      &kp T             &kp Z   &Umlauts  &kp I      &kp O          &kp P
 &kp A                    &kp S             &kp D         &kp F      &kp G             &kp H   &kp J     &kp K      &kp L          &hochkomma
-&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B             &kp N   &kp M     &kp COMMA  &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
+&LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B             &kp N   &kp M     &kp COMMA  &kp PERIOD     &RShift_kp RIGHT_SHIFT SLASH
 &trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp LC(UP_ARROW)  &trans  &mo 2     &mo 1      &kp RIGHT_GUI  &trans
             >;
 
