@@ -18,7 +18,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <105>;
+            tapping-term-ms = <135>;
             hold-trigger-key-positions = <20 29>;
             flavor = "tap-preferred";
             hold-while-undecided;
@@ -56,6 +56,8 @@
             label = "HOCHKOMMA";
             #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp SQT>, <&kp DQT>;
+
+            tapping-term-ms = <270>;
         };
     };
 
