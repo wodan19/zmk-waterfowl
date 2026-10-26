@@ -50,6 +50,13 @@
 
             tapping-term-ms = <180>;
         };
+
+        hochkomma: hochkomma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HOCHKOMMA";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp SQT>, <&kp DQT>;
+        };
     };
 
     keymap {
@@ -72,7 +79,7 @@
 
             bindings = <
 &kp Q                    &kp W             &kp E         &kp R      &kp T             &kp Z   &Umlauts  &kp I      &kp O          &kp P
-&kp A                    &kp S             &kp D         &kp F      &kp G             &kp H   &kp J     &kp K      &kp L          &kp SEMI
+&kp A                    &kp S             &kp D         &kp F      &kp G             &kp H   &kp J     &kp K      &kp L          &hochkomma
 &LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B             &kp N   &kp M     &kp COMMA  &kp PERIOD     &LShift_kp RIGHT_SHIFT SLASH
 &trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp LC(UP_ARROW)  &trans  &mo 2     &mo 1      &kp RIGHT_GUI  &trans
             >;
@@ -195,12 +202,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        qwert_layer_on_off {
-            bindings = <&tog 0>;
-            key-positions = <5 9>;
-            layers = <0 4>;
-        };
 
         copy {
             bindings = <&kp LG(C)>;
