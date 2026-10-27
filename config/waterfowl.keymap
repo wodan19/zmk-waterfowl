@@ -239,6 +239,18 @@
             key-positions = <10 19>;
             layers = <0 4>;
         };
+
+        Lock_Mac {
+            bindings = <&kp LC(RG(Q))>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        Input_Alpha {
+            bindings = <&Input_Alpha>;
+            key-positions = <8 9>;
+            layers = <1>;
+        };
     };
 };
 
@@ -263,6 +275,13 @@
             bindings = <&macro_press>, <&tog 1>, <&macro_release>, <&tog 1>;
 
             label = "TOG_1_ON_OFF";
+        };
+
+        Input_Alpha: Input_Alpha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp E &kp X &kp I &kp G &kp O &kp LS(T) &kp O &kp N &kp O &kp R &kp N2 &kp N0 &kp N2 &kp N6>;
+            label = "INPUT_ALPHA";
         };
     };
 };
