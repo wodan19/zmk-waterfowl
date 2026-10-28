@@ -269,14 +269,6 @@
                 <&kp LALT>;
         };
 
-        tog_1_on_off: tog_1_on_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&tog 1>, <&macro_release>, <&tog 1>;
-
-            label = "TOG_1_ON_OFF";
-        };
-
         Input_Alpha: Input_Alpha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
