@@ -80,6 +80,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        u_morph: u_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_MORPH";
+            bindings = <&Umlauts>, <&kp LS(U)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -101,7 +110,7 @@
  */
 
             bindings = <
-&kp Q                    &kp W             &kp E         &kp R      &kp T             &kp Z   &Umlauts  &kp I      &kp O          &kp P
+&kp Q                    &kp W             &kp E         &kp R      &kp T             &kp Z   &u_morph  &kp I      &kp O          &kp P
 &kp A                    &kp S             &kp D         &kp F      &kp G             &kp H   &kp J     &kp K      &kp L          &hochkomma_morph
 &LShift_kp LEFT_SHIFT Y  &kp X             &kp C         &kp V      &kp B             &kp N   &kp M     &kp COMMA  &kp PERIOD     &RShift_kp RIGHT_SHIFT SLASH
 &trans                   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE  &kp LC(UP_ARROW)  &trans  &mo 2     &mo 1      &kp RIGHT_GUI  &trans
