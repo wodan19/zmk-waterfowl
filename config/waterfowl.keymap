@@ -89,6 +89,19 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        nav_cmd: nav_cmd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NAV_CMD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-key-positions = <1 2 3 11 12 13 4 10>;
+        };
     };
 
     keymap {
@@ -140,10 +153,10 @@
  */
 
             bindings = <
-&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &kp PG_UP  &kp KP_PLUS  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
-&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp MINUS    &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
-&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans     &kp N0       &kp N1  &kp N2  &kp N3  &mt RIGHT_SHIFT KP_EQUAL
-&trans          &trans          &trans          &trans           &trans     &trans       &trans  &trans  &trans  &trans
+&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &kp PG_UP  &kp KP_PLUS  &kp N7                &kp N8                &kp N9  &kp KP_DIVIDE
+&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp MINUS    &nav_cmd LEFT_GUI N4  &nav_cmd LEFT_ALT N5  &kp N6  &kp KP_ASTERISK
+&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans     &kp N0       &kp N1                &kp N2                &kp N3  &mt RIGHT_SHIFT KP_EQUAL
+&trans          &trans          &trans          &trans           &trans     &trans       &trans                &trans                &trans  &trans
             >;
 
             //            sensor-bindings = <
