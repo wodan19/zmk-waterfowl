@@ -153,10 +153,10 @@
  */
 
             bindings = <
-&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &kp PG_UP  &kp KP_PLUS  &kp N7                &kp N8                &kp N9  &kp KP_DIVIDE
-&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp MINUS    &nav_cmd LEFT_GUI N4  &nav_cmd LEFT_ALT N5  &kp N6  &kp KP_ASTERISK
-&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans     &kp N0       &kp N1                &kp N2                &kp N3  &mt RIGHT_SHIFT KP_EQUAL
-&trans          &trans          &trans          &trans           &trans     &trans       &trans                &trans                &trans  &trans
+&kp ESC         &kp BACKSPACE   &kp UP_ARROW    &kp DELETE       &kp PG_UP  &kp KP_PLUS  &kp N7                &kp N8                &kp N9                         &kp KP_DIVIDE
+&kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none      &kp MINUS    &nav_cmd LEFT_GUI N4  &nav_cmd LEFT_ALT N5  &nav_cmd RIGHT_SHIFT NUMBER_6  &kp KP_ASTERISK
+&kp LEFT_SHIFT  &trans          &trans          &kp RET          &trans     &kp N0       &kp N1                &kp N2                &kp N3                         &mt RIGHT_SHIFT KP_EQUAL
+&trans          &trans          &trans          &trans           &trans     &trans       &trans                &trans                &trans                         &trans
             >;
 
             //            sensor-bindings = <
